@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <section id="task-input">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <input type="text" id="task-title" placeholder="Task Title" required>
+                <textarea id="task-desc" placeholder="Task Description"></textarea>
+                <input type="date" id="task-date">
+                <select id="task-category">
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Shopping">Shopping</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+        <section id="task-filter">
+            <h2>Filter Tasks</h2>
+            <input type="text" id="search" placeholder="Search tasks">
+            <select id="filter-category">
+                <option value="all">All Categories</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+            <button onclick="filterTasks()">Filter</button>
+        </section>
+        <section id="task-list">
+            <h2>Task List</h2>
+            <div id="tasks"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
